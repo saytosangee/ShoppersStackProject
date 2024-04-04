@@ -28,7 +28,7 @@ public class BaseTest implements FrameWorkConstants {
 
 	/**
 	 *
-	 * @author Rakesh B
+	 * @author Afshan
 	 *
 	 **/
 
