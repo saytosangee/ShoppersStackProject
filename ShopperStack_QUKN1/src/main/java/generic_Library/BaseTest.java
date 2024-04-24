@@ -69,11 +69,13 @@ public class BaseTest implements FrameWorkConstants {
 	}
 
 	@BeforeMethod(alwaysRun = true)
-	public void performingLogin(Method method) throws IOException {
+	public void performingLogin(Method method) throws IOException, InterruptedException {
 
 		test = reports.createTest(method.getName());
 		base_Page = new BasePage(driver);
+		Thread.sleep(3000);
 		base_Page.getLoginButton().click();
+		Thread.sleep(3000);
 		LoginPage login_Page = new LoginPage(driver);
 		login_Page.performLogin(data_Utility.getDataFromProperties(email_Key),data_Utility.getDataFromProperties(password_Key));
 		Reporter.log("Performing Login", true);
